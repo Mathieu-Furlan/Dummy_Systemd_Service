@@ -1,0 +1,12 @@
+# /etc/systemd/system
+
+[Unit]
+Description=Dummy Service
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /bin/dummy.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
