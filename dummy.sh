@@ -1,6 +1,8 @@
 #!/bin/bash
 
+message="Dummy service is running..."
 while true; do
-  echo "Dummy service is running..." | systemd-cat
+  echo $message | systemd-cat
+  echo $message >> /var/log/dummy-service.log
   sleep 10
 done
